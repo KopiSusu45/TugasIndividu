@@ -1,11 +1,11 @@
-<?php include("crud/config.php"); ?>
+<?php include("config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMK Negeri 1 Lagos</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -17,8 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="index1.php">Home</a>
-            <a class="nav-link" href="form-daftar.php">Pendaftaran</a>
-            <a class="nav-link" href="../form-guru.php">Data Guru</a>
+            <a class="nav-link" href="form-guru.php">Data Guru</a>
         </div>
         </div>
     </div>
@@ -52,8 +51,8 @@
                         echo "<td>".$guru['no_telepon']."</td>";
                         echo "<td>".$guru['email']."</td>";
                         echo "<td>
-                        <a href='index.php?edit=".$guru['id_guru']."' class='btn btn-warning'>Edit</a>
-                        <a href='index.php?delete=".$guru['id_guru']. "' class='btn btn-danger'>Delete</a>
+                        <a href='form-guru.php?edit=".$guru['id_guru']."' class='btn btn-warning'>Edit</a>
+                        <a href='proses-guru.php?hapus=".$guru['id_guru']. "' class='btn btn-danger'>Delete</a>
                         </td>";
                     echo "</tr>";
                     }
