@@ -35,9 +35,7 @@
 									</button>
 								</div>
 							</form>
-							<div class="mt-4 text-center">
-									Belum Punya Akun? <a href="register.php">Buat Akun Sekarang</a>
-							</div>
+							
 						</div>
 					</div>
 				
