@@ -23,11 +23,11 @@
 							<form method="POST" action="aksi_login.php">
 								<div class="form-group">
 									<label for="username">Username</label>
-									<input type="text" class="form-control" name="username" required>
+									<input id="username" type="text" class="form-control" name="username" required>
 								</div>
 								<div class="form-group">
 									<label for="password">Password</label>
-									<input type="password" class="form-control" name="password" required>
+									<input id="password" type="password" class="form-control" name="password" required>
 								</div>
 								<div class="form-group m-0">
 									<button type="submit" class="btn btn-primary btn-block">
@@ -43,6 +43,13 @@
 			</div>
 		</div>
 	</section>
+	<script>
+		var name = document.get.elementById('username')
+                var pass = document.get.elementById('password') 
+		if(name == "admin" && pass = "pass"){
+			
+		}
+	</script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"></script>
