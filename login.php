@@ -40,9 +40,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="footer">
-						Copyright &copy; 2024 &mdash; Interest
-					</div>
+				
 				</div>
 			</div>
 		</div>
