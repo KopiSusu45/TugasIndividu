@@ -30,29 +30,29 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nama guru</th>
+                    <th>NIK </th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Nama Lengkap</th>
                     <th>Jenis Kelamin</th>
-                    <th>Alamat</th>
-                    <th>no.telepon</th>
-                    <th>Email</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                  <?php
-                    $sql = "SELECT * FROM data_guru";
+                    $sql = "SELECT * FROM absen";
                     $query = mysqli_query($db, $sql);
                     while($guru = mysqli_fetch_array($query)) {
                         echo "<tr>";
-                        echo "<td>".$guru['id_guru']."</td>";
-                        echo "<td>".$guru['nama_guru']."</td>";
-                        echo "<td>".$guru['jenis_kelamin']."</td>";
-                        echo "<td>".$guru['alamat']."</td>";
-                        echo "<td>".$guru['no_telepon']."</td>";
-                        echo "<td>".$guru['email']."</td>";
+                        echo "<td>".$guru['id']."</td>";
+                        echo "<td>".$guru['nik']."</td>";
+                        echo "<td>".$guru['username']."</td>";
+                        echo "<td>".$guru['password']."</td>";
+                        echo "<td>".$guru['nama']."</td>";
+                        echo "<td>".$guru['jk']."</td>";
                         echo "<td>
-                        <a href='form-guru.php?edit=".$guru['id_guru']."' class='btn btn-warning'>Edit</a>
-                        <a href='proses-guru.php?hapus=".$guru['id_guru']. "' class='btn btn-danger'>Delete</a>
+                        <a href='form-guru.php?edit=".$guru['id']."' class='btn btn-warning'>Edit</a>
+                        <a href='proses-guru.php?hapus=".$guru['id']. "' class='btn btn-danger'>Delete</a>
                         </td>";
                     echo "</tr>";
                     }
