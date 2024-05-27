@@ -5,14 +5,14 @@ include("config.php");
     if(isset($_POST['aksi'])){
 
         if($_POST['aksi']=='add'){
+            $nik = $_POST['nik'];
             $nama = $_POST['nama'];
-            $jk = $_POST['jenis_kelamin'];
-            $alamat = $_POST['alamat'];
-            $notel = $_POST['notel'];
-            $email = $_POST['email'];
+            $jk = $_POST['jk'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
         
-            $sql = "INSERT INTO data_guru (nama_guru, jenis_kelamin, alamat, no_telepon, email)
-             VALUE ('$nama','$jk','$alamat','$notel','$email')";
+            $sql = "INSERT INTO absen (nik, nama, jk, username, password)
+             VALUE ('$nik','$nama','$jk','$username','$password')";
              $query= mysqli_query($db, $sql);
         
             //  apakah queri berhasil disimpan
@@ -24,15 +24,15 @@ include("config.php");
                 header('Location: index1.php?status=gagal');
             }
         }else if($_POST['aksi'] == 'edit'){
-            $id_guru = $_POST['id_guru'];
+            $id = $_POST['id'];
+            $nik = $_POST['nik'];
             $nama = $_POST['nama'];
-            $alamat = $_POST['alamat'];
-            $jk = $_POST['jenis_kelamin'];
-            $notel = $_POST['notel'];
-            $email = $_POST['email'];
+            $jk = $_POST['jk'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
     
             // buat queri
-            $sql = "UPDATE data_guru SET nama_guru='$nama',alamat='$alamat',jenis_kelamin='$jk',no_telepon='$notel',email='$email' WHERE id_guru='$id_guru';";
+            $sql = "UPDATE absen SET nik='$nik',nama='$nama',jk='$jk',username='$username',password='$password' WHERE id='$id';";
             $query= mysqli_query($db, $sql);
     
             //  apakah queri berhasil disimpan
@@ -47,9 +47,9 @@ include("config.php");
     }
     if(isset($_GET['hapus'])){
 
-        $id_guru = $_GET['hapus'];
+        $id = $_GET['hapus'];
     
-        $sql = "DELETE FROM data_guru WHERE id_guru='$id_guru';";
+        $sql = "DELETE FROM absen WHERE id='$id';";
         $query = mysqli_query($db, $sql);
     
         if($query){
