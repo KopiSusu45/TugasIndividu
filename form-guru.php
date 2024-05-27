@@ -46,22 +46,22 @@ include'config.php';
     <div class="container mt-4">
     <h2>Formulir Data Guru SMK Negeri 1 Lagos</h2><br>
         <form action="proses-guru.php" method="POST">
-        <input type="hidden" value="<?php echo $id_guru;?>" name="id_guru">
+        <input type="hidden" value="<?php echo $id;?>" name="id_guru">
             <div class="mb-3">
-                <label for="nama" class="form-label">Nama Guru: </label>
+                <label for="nama" class="form-label">NIK: </label>
+                <input type="text" class="form-control" name="nik" value="<?php echo $nik;?>" placeholder="NIK" />
+            </div>
+            <div class="mb-3">
+                <label for="alamat" class="form-label">Nama: </label>
                 <input type="text" class="form-control" name="nama" value="<?php echo $nama;?>" placeholder="nama lengkap" />
             </div>
             <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat</label>
-                <textarea class="form-control" name="alamat" rows="3"><?php echo $alamat;?></textarea>
+                <label for="email" class="form-label">Username: </label>
+                <input type="text" class="form-control" name="username" value="<?php echo $username;?>" placeholder="username " />
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Alamat Email: </label>
-                <input type="email" class="form-control" name="email" value="<?php echo $email;?>" placeholder="email " />
-            </div>
-            <div class="mb-3">
-                <label for="notel" class="form-label">No.Tel: </label>
-                <input type="number" class="form-control" name="notel" value="<?php echo $notel;?>" placeholder="nomor telepon" />
+                <label for="notel" class="form-label">Password: </label>
+                <input type="password" class="form-control" name="pass" value="<?php echo $password;?>" placeholder="password" />
             </div>
             <div class="mb-3">
             <div class="form-check">
