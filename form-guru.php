@@ -1,22 +1,22 @@
 <?php 
 include'config.php';
-    $id_guru = '';
+    $id = '';
+    $nik = '';
     $nama = '';
     $jk = '';
-    $alamat = '';
-    $no_telepon = '';
-    $email = '';
+    $username = '';
+    $password = '';
 
     if(isset($_GET['edit'])){
-        $id_guru = $_GET['edit'];
-        $sql = "SELECT * FROM data_guru WHERE id_guru='$id_guru';";
+        $id = $_GET['edit'];
+        $sql = "SELECT * FROM absen WHERE id='$id';";
         $query = mysqli_query($db, $sql);
         $result = mysqli_fetch_assoc($query);
-        $nama = $result['nama_guru'];
-        $jk = $result['jenis_kelamin'];
-        $alamat = $result['alamat'];
-        $notel = $result['no_telepon'];
-        $email = $result['email'];
+        $nik = $result['nik'];
+        $nama = $result['nama'];
+        $jk = $result['jk'];
+        $username = $result['username'];
+        $password = $result['password'];
     }
 ?>
 
